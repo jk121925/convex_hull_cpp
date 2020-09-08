@@ -12,10 +12,10 @@ private:
 	double X;
 	double Y;
 public:
-	void setInfo(double _x, double _y)
+	point(double x, double y)
 	{
-		X = _x;
-		Y = _y;
+		X = x;
+		Y = y;
 	}
 	void showData()
 	{
@@ -49,7 +49,7 @@ double line_equationF(point pt1, point pt2, point target) {
 	return val;
 }
 
-bool vector_inner_testF(vector<double> vec) {
+bool vector_innerF(vector<double> vec) {
 	vec.erase(unique(vec.begin(), vec.end()), vec.end());
 	return (vec.size() == 1);
 }
@@ -58,10 +58,9 @@ int main() {
 	random_device rng;
 	uniform_real_distribution<double> dist(-10.0, 10.0);
 
-	vector <point> vecPoint;
+	vector<point> vecPoint;
 	for (int i = 0; i < 10; i++) {
-		point temp1;
-		temp1.setInfo(dist(rng), dist(rng));
+		point temp1(dist(rng), dist(rng));
 		vecPoint.push_back(temp1);
 	}
 
@@ -79,17 +78,17 @@ int main() {
 	for (int i = 0; i < vecComb.size(); i++) {
 		vector<double> dummy;
 		for (int j = 0; j < vecPoint.size(); j++) {
-			double test_val = line_equationF(vecComb[i][0], vecComb[i][1], vecPoint[j]);
-			if (test_val > 0)
+			double val = line_equationF(vecComb[i][0], vecComb[i][1], vecPoint[j]);
+			if (val > 0)
 			{
 				dummy.push_back(1);
 			}
-			else if (test_val < 0)
+			else if (val < 0)
 			{
 				dummy.push_back(-1);
 			}
 		}
-		if (bool A = vector_inner_testF(dummy))
+		if (bool A = vector_innerF(dummy))
 		{
 			convex_hull_2d.push_back(vecComb[i]);
 		}
