@@ -1,5 +1,0 @@
-﻿  convex_hull.cpp
-C:\Users\jk121\Desktop\codeing_study_C++\convex_hull_\convex_hull_cpp\convex_hull_cpp\convex_hull.cpp(79,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\jk121\Desktop\codeing_study_C++\convex_hull_\convex_hull_cpp\convex_hull_cpp\convex_hull.cpp(81,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\jk121\Desktop\codeing_study_C++\convex_hull_\convex_hull_cpp\convex_hull_cpp\convex_hull.cpp(98,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  convex_hull_cpp.vcxproj -> C:\Users\jk121\Desktop\codeing_study_C++\convex_hull_\convex_hull_cpp\Debug\convex_hull_cpp.exe
