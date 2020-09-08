@@ -88,7 +88,7 @@ int main() {
 				dummy.push_back(-1);
 			}
 		}
-		if (bool A = vector_innerF(dummy))
+		if (vector_innerF(dummy))
 		{
 			convex_hull_2d.push_back(vecComb[i]);
 		}
